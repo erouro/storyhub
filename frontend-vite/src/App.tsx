@@ -21,9 +21,10 @@ export default function App() {
           style={{ padding: 10, border: "1px solid #ddd", marginBottom: 10 }}
         >
           <h3>{story.title}</h3>
-          <p>{story.description}</p>
+          <p>{story.excerpt || story.description || ''}</p>
         </div>
       ))}
     </div>
   );
 }
+
