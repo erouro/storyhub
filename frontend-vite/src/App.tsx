@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import StoryList from "./pages/StoryList";
 import StoryDetail from "./pages/StoryDetail";
+import CategoryPage from "./pages/CategoryPage";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<StoryList />} />
           <Route path="/story/:id" element={<StoryDetail />} />
+          <Route path="/category/:name" element={<CategoryPage />} />
           <Route path="*" element={<div>Page not found. <Link to="/">Go home</Link></div>} />
         </Routes>
 
@@ -26,3 +28,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
