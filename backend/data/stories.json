@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "title": "Sample Story One",
+    "excerpt": "A placeholder excerpt for story one.",
+    "content": "Full content stored here.",
+    "thumbnail_url": "",
+    "categories": ["Romance", "New Arrival"],
+    "primary_tag": "Romance",
+    "created_at": "2025-12-03T00:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "title": "Sample Story Two",
+    "excerpt": "Another placeholder excerpt.",
+    "content": "Content two.",
+    "thumbnail_url": "",
+    "categories": ["Thriller"],
+    "primary_tag": "Thriller",
+    "created_at": "2025-12-02T00:00:00.000Z"
+  }
+]
