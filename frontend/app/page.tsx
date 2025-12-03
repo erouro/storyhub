@@ -3,16 +3,16 @@
 import useSWR from "swr";
 import StoryCard from "../components/StoryCard";
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const API_BASE = process.env.NEXT_PUBLIC_API_ORIGIN || "https://storyhub-1-8zac.onrender.com";
+
+const fetcher = (url: string) => fetch(API_BASE + url).then(r => r.json());
 
 export default function Home() {
-  const { data, error } = useSWR(
-    process.env.NEXT_PUBLIC_API_ORIGIN + "/api/stories",
-    fetcher
-  );
 
-  if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
+  const { data, error } = useSWR("/api/stories", fetcher);
+
+  if (error) return <div>Failed to load stories.</div>;
+  if (!data) return <div>Loading stories...</div>;
 
   return (
     <div>
@@ -25,4 +25,5 @@ export default function Home() {
     </div>
   );
 }
+
 
